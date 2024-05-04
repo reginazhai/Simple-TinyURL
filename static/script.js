@@ -1,4 +1,5 @@
 // Get the long url from the form
+const ROOT_URL = window.location.origin;
 
 // Reference: https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript
 function submitData(event) {
@@ -19,7 +20,8 @@ function shortenUrl(url) {
       return response.json();
     })
     .then(data => {
-        document.getElementById('result').innerHTML = "<p>Shortened URL: " + data.shortened_url + "</p>";
+        document.getElementById('result').innerHTML = "<p>Shortened URL: " +
+        "<a href='" + data.shortened_url + "' target='_blank'>" + ROOT_URL + "/" + data.shortened_url + "</a></p>";
     })
     .catch(error => console.error('Error:', error));
 }

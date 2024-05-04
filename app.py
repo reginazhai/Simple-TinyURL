@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 # Rate limiting
 limiter = Limiter(app=app, key_func=get_remote_address,
-                  default_limits=["100 per day", "10 per hour"])
+                  default_limits=["1000 per day", "100 per hour"])
 
 # Constants
 CHARACTERS = string.digits + string.ascii_letters
@@ -43,6 +43,7 @@ def generate_short_url(id):
     return short_url
 
 def decode_short_url(short_url):
+    print(f"Decoding {short_url}")
     # Remove padding
     short_url = short_url.lstrip("0")
     id = 0

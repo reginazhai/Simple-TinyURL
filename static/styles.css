@@ -1,0 +1,23 @@
+/* Body styles */
+body {
+    font-family: arial, helvetica, sans-serif;;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    margin: 20px 0;
+    background-color: rgb(66, 133, 244);
+    border-color: rgb(234, 239, 243);
+    color: rgb(255, 255, 255);
+    border: 1px solid;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#result p {
+    margin: unset;
+}
