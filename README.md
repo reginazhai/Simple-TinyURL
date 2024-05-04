@@ -93,6 +93,11 @@ For the simplicity and limitation of the project, we are using Base62 encoding t
 
 ### Frontend Design
 
+The frontend design is simple, with the title and the main interface to input. The input is taken as a form that receives the long URL, and connects to the API endpoint that handles the backend calculation through `POST` method. When a response is returned from the API endpoint, we receive the link and display it at the webpage. The link can also be clicked so that the user can be redirected directly to the original URL. It is also a way of testing if the system works.
+
+### Further improvements
+
+The current error handling is present but not very informative to the user. So a possible improvement on this would be to redirect to webpages (or sends out alerts) that displays the error to the user for improved inputs.
 
 ## Additional Considerations
 
